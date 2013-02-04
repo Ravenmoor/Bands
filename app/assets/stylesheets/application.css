@@ -11,3 +11,27 @@
  *= require_self
  *= require_tree .
 */
+@import url("reset.css");
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color:#333
+}
+
+p {
+    padding: 10px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#content {
+    float: left;
+    background: #FFD700;
+    width: 1000;
+}
+
+
