@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= stylesheet_link_tag "search.css", :media => 'screen' %>
+</head>
+<body>
+  <h1><center>Rate My Band</center></h1>
+  <center><%= image_tag("RockBand.jpg", :alt => "Bands", :size => "500x350") %></center>
+	<%= form_tag '/search/search', :method => 'get' do %>
+		<center><p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+		</p></center>
+	<% end %>
+</body>
+</html>
