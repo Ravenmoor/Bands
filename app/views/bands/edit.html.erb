@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @band %> |
-<%= link_to 'Back', bands_path %>
+<%= link_to 'List All', bands_path %> |
+<%= link_to 'Search', :controller => "search", :action => "index" %>
