@@ -9,7 +9,7 @@
 	<%= form_tag '/search/search', :method => 'get' do %>
 		<center><p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search", :name => nil, :class => 'button2' %>
 		</p></center>
 	<% end %>
 </body>

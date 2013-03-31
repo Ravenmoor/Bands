@@ -1,3 +1,3 @@
 class Band < ActiveRecord::Base
-  attr_accessible :name, :notes
+  attr_accessible :name
 end
