@@ -4,6 +4,7 @@
 	<%= stylesheet_link_tag "search.css", :media => 'screen' %>
 </head>
 <body>
+	<%= render :partial => '/layouts/login_bar' %>
   <h1><center>Rate My Band</center></h1>
   <center><%= image_tag("RockBand.jpg", :alt => "Bands", :size => "500x350") %></center>
 	<%= form_tag '/search/search', :method => 'get' do %>
