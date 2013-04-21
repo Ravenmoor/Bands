@@ -13,3 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function(){
+	$('#login_button').click(function (event) {
+	    var form = $("#login_form");
+	    form.submit();
+	    return false;
+	});
+});

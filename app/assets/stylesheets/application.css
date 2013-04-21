@@ -9,9 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  */
 
-#header {
+ .error, .notice, .alert {
+ 	background-color: red;
+ }
+
+#login_bar {
 	text-align: right;
+	min-height: 24px;
 	background-color: #0099ff;
+}
+
+#create_button, #logout_button, #login_button {
+	float: right;
 }
 
 #footer {
@@ -21,15 +30,43 @@
 	width: 100%;
 }
 
-.button
-{
-    width   : 80px;
-    background-color  : white;
-    cursor  : pointer;
-    font-family : 'voltaeftu-regular',Times New Roman;
-    font-size   : 12px;
-    color   : #0;
-    border  : solid black 1px;
-    margin      : 0px;
-    padding     : 0px;
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+
+a.button {
+    background: transparent url('bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 17px; /* sliding doors padding */
+    text-decoration: none;
+}
+
+a.button span {
+    background: transparent url('bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0px 5px 18px;
+}
+
+a.button:active {
+    background-position: bottom right;
+    color: #000;
+    padding-right: 17px;
+    outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0px 4px 18px; /* push text down 1px */
 }

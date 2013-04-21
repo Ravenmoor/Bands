@@ -3,19 +3,17 @@
 		<% if user_signed_in? %>
 			Welcome, 
 			<%= :user %>.
-			<a class="button" href="#"><span>Sign Out</span></a>
+			<a id='logout_button' class="button" href="/users/sign_out"><span>Sign Out</span></a>
 			<!-- submit button for log out -->
 		<% else %>
-			<%= form_for '/application/login', :method => 'get' do %>
+			<%= form_tag '/application/login', :method => 'get', :id => "login_form" do %>
 				<p> 
-					username
+					email
 					<%= text_field_tag :username, params[:username] %>
 					password				
 					<%= text_field_tag :password, params[:password] %>
-<!--	    		<%= submit_tag "Log In", :name => nil , :class => 'button' %> -->
-					<!-- <%= link_to('Create Account', new_user_registration_path, :class => 'button') %> -->
-					<a class="button" href="#" ><span>Sign In</span></a>
-	  			<a class="button" href="/users/sign_up" ><span>Create Account</span></a>
+					<a id='create_button' class="button" href="/users/sign_up"><span>Create Account</span></a>
+					<a id='login_button' class="button"><span>Sign In</span></a>
 	  		</p>
 	  	<% end %>
 		<% end %>

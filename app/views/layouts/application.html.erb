@@ -4,13 +4,15 @@
   	<title><%= title %></title>
   	<%= csrf_meta_tag %>
   	<%= stylesheet_link_tag "application" %>
+  	<%= javascript_include_tag "application" %>
   </head>
   <body>
 	  <div id='header' >
-			<!-- moved to login partial -->
+			<%= render :partial => '/layouts/login_bar' if (params[:controller] != 'devise/registrations') %>
 		</div>
-		<p class="notice"><%= notice %></p>
-	  <p class="alert"><%= alert %></p>
+		<p class="notice"><%= flash[:notice] %></p>
+	  <p class="alert"><%= flash[:alert] %></p>
+	  <p class='error'><%= flash[:error] %></p>
 		<%= yield %>
 		<div id='footer'>
 			&#169; Michael Ferrell 2013

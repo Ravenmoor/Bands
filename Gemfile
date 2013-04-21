@@ -16,6 +16,7 @@ gem 'growl'
 gem 'rb-fsevent'
 gem 'guard-rspec'
 gem 'devise'
+gem 'jquery-rails'
 
 
 # Gems used only for assets and not required
